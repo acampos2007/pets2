@@ -29,5 +29,14 @@ $f3->route('GET /order', function()
 }
 );
 
+//Define a order 2 route
+$f3->route('POST /order2', function()
+{
+    $view = new Template();
+    echo $view->render('views/pet-order2.html');
+}
+);
+
+
 //Run fat free
 $f3->run();

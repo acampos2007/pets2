@@ -17,7 +17,15 @@ $f3->route('GET /', function()
     $view = new Template();
     echo $view->render('views/pet-home.html');
     //echo '<h1>My Pets2</h1>';
-    //echo '<h1>Hello, World!</h1>';
+
+}
+);
+
+//Define a order route
+$f3->route('GET /order', function()
+{
+    $view = new Template();
+    echo $view->render('views/pet-order.html');
 }
 );
 

@@ -34,6 +34,9 @@ $f3->route('POST /order2', function()
 {
     $view = new Template();
     echo $view->render('views/pet-order2.html');
+
+    $_SESSION['pettype'] = $_POST['pettype'];
+    $_SESSION['color'] = $_POST['color'];
 }
 );
 
@@ -42,7 +45,9 @@ $f3->route('POST /summary', function()
 {
     $view = new Template();
     echo $view->render('views/summary.html');
-    var_dump ($_POST);
+    //var_dump ($_POST);
+
+    $_SESSION['petname'] = $_POST['petname'];
 }
 );
 

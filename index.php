@@ -37,6 +37,15 @@ $f3->route('POST /order2', function()
 }
 );
 
+//Define a Summary route
+$f3->route('POST /summary', function()
+{
+    $view = new Template();
+    echo $view->render('views/summary.html');
+    var_dump ($_POST);
+}
+);
+
 
 //Run fat free
 $f3->run();
